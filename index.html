@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>AVN travels</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#book">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Adventure Awaits</h2>
+            <p>Book your next trip with ease. Explore new destinations and book your flights, hotels, and tours.</p>
+            <a href="#book" class="btn-primary">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-cards">
+            <div class="card">
+                <img src="eiffel-tower-paris-france-champ-de-mars-view.jpg" alt="Paris">
+                <h3>Paris</h3>
+                <p>Discover the city of love and art.</p>
+            </div>
+            <div class="card">
+                <img src="gettyimages-1390815938.avif" alt="Tokyo">
+                <h3>Tokyo</h3>
+                <p>Experience modern culture and ancient traditions.</p>
+            </div>
+            <div class="card">
+                <img src="istockphoto-1454217037-612x612.jpg" alt="New York">
+                <h3>New York</h3>
+                <p>Explore the Big Apple’s vibrant streets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book">
+        <h2>Book Your Trip</h2>
+        <form action="#" method="POST" class="booking-form" id="booking-form">
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination">
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="new_york">New York</option>
+            </select>
+    
+            <label for="check-in">Check-in Date:</label>
+            <input type="date" id="check-in" name="check-in">
+    
+            <label for="check-out">Check-out Date:</label>
+            <input type="date" id="check-out" name="check-out">
+    
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10">
+    
+            <button type="submit" class="btn-primary">Book Now</button>
+        </form>
+    
+        <!-- This will be the confirmation message -->
+        <p id="confirmation-message" style="display:none; color: green; font-weight: bold;">Booking Confirmed!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us.</p>
+        <form action="#" method="POST" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AVN Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to show the confirmation message
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            
+            // Show the confirmation message
+            document.getElementById("confirmation-message").style.display = "block";
+            
+            // Optionally, you can reset the form after submission
+            document.getElementById("booking-form").reset();
+        });
+    </script>
+
+</body>
+</html>
